@@ -2,18 +2,18 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
 # set your lab user name
-  name: <userName>-hello-world
+  name: far-art-hello-world
 spec:
   replicas: 3
   selector:
     matchLabels:
 # set your lab user name
-      app: <userName>-hello-world
+      app: far-art-hello-world
   template:
     metadata:
       labels:
 # set your lab user name
-        app: <userName>-hello-world
+        app: far-art-hello-world
     spec:
       containers:
         - resources: {}
@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # update with the image you build in part 1
-          image: 'quay.io/<quay-userName>/<imageName>:<Tag>'
+          image: 'quay.io/far-art/testapp:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
