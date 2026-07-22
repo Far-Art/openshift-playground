@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+# set your user name
+  name: far-art-hello-world
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+# set your user name
+    app: far-art-hello-world
