@@ -1,18 +1,15 @@
 FROM registry.access.redhat.com/ubi8/nodejs-16
 
-WORKDIR /tmp
+WORKDIR /opt/app-root/src
 
-USER root
+COPY package*.json ./
 
-COPY src/package*.json ./
+RUN npm ci
 
-RUN npm install
+COPY src/ ./
 
-COPY src .
-
-ENV PORT 8080
-
-USER 1001
+ENV PORT=8080
 
 EXPOSE 8080
+
 CMD ["node", "app.js"]
