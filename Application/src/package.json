@@ -1,0 +1,16 @@
+{
+  "name": "hello-openshift",
+  "version": "1.0.0",
+  "description": "playground for openshift",
+  "license": "ISC",
+  "author": "artur",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "router": "^2.2.0"
+  }
+}
