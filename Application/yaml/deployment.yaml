@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # update with the image you build in part 1
-          image: 'quay.io/far-art/testapp:v1'
+          image: 'quay.io/far-art/testapp'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
