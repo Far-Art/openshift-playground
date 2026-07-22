@@ -1,3 +1,4 @@
 /Application/src/node_modules/
 /.idea/
 /Application/package-lock.json
+/Application/node_modules/
